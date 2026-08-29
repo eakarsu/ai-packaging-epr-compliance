@@ -1,0 +1,1433 @@
+{
+  "id": "ai-packaging-epr-compliance",
+  "title": "PackEPR Compliance",
+  "tagline": "Packaging composition, producer obligations, eco-fees, declarations, and recycling evidence",
+  "industry": "Extended Producer Responsibility",
+  "port": 4550,
+  "accent": "#0f766e",
+  "valueLabel": "Packaging placed on market",
+  "value": "148K tons",
+  "workflows": [
+    {
+      "id": "scope",
+      "title": "Producer Obligation Assessment",
+      "description": "Evaluate producer obligation assessment with source evidence, accountable ownership, financial or operational impact, and documented approval.",
+      "fields": [
+        {
+          "key": "caseReference",
+          "label": "Producer Obligation Assessment Reference",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "entity",
+          "label": "Producer Organization",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "reviewDate",
+          "label": "Review Date",
+          "type": "date",
+          "required": true
+        },
+        {
+          "key": "metric",
+          "label": "Markets in Scope",
+          "type": "number",
+          "required": true
+        },
+        {
+          "key": "evidenceNotes",
+          "label": "Evidence and Reviewer Notes",
+          "type": "textarea",
+          "required": false
+        }
+      ],
+      "states": [
+        "intake",
+        "analyzing",
+        "review",
+        "approved",
+        "closed"
+      ],
+      "examples": [
+        {
+          "id": "standard",
+          "label": "Fill Standard Case",
+          "values": {
+            "caseReference": "Producer Obligation Assessment Reference STD-2026-104",
+            "entity": "Producer Organization STD-2026-104",
+            "reviewDate": "2026-09-08",
+            "metric": 125,
+            "evidenceNotes": "Complete: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        },
+        {
+          "id": "high-risk",
+          "label": "Fill High-Risk Case",
+          "values": {
+            "caseReference": "Producer Obligation Assessment Reference RISK-2026-227",
+            "entity": "Producer Organization RISK-2026-227",
+            "reviewDate": "2026-08-19",
+            "metric": 975,
+            "evidenceNotes": "Critical exception: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        },
+        {
+          "id": "exception",
+          "label": "Fill Exception Case",
+          "values": {
+            "caseReference": "Producer Obligation Assessment Reference EXC-2026-319",
+            "entity": "Producer Organization EXC-2026-319",
+            "reviewDate": "2026-08-10",
+            "metric": 41,
+            "evidenceNotes": "Reviewer follow-up: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        }
+      ],
+      "aiActions": [
+        {
+          "id": "assess",
+          "label": "Assess Risk & Value"
+        },
+        {
+          "id": "evidence",
+          "label": "Build Evidence Checklist"
+        },
+        {
+          "id": "plan",
+          "label": "Recommend Action Plan"
+        }
+      ]
+    },
+    {
+      "id": "composition",
+      "title": "Packaging Composition Classification",
+      "description": "Evaluate packaging composition classification with source evidence, accountable ownership, financial or operational impact, and documented approval.",
+      "fields": [
+        {
+          "key": "caseReference",
+          "label": "Packaging Composition Classification Reference",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "entity",
+          "label": "Producer Organization",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "reviewDate",
+          "label": "Review Date",
+          "type": "date",
+          "required": true
+        },
+        {
+          "key": "metric",
+          "label": "Packaging SKUs",
+          "type": "number",
+          "required": true
+        },
+        {
+          "key": "evidenceNotes",
+          "label": "Evidence and Reviewer Notes",
+          "type": "textarea",
+          "required": false
+        }
+      ],
+      "states": [
+        "intake",
+        "analyzing",
+        "review",
+        "approved",
+        "closed"
+      ],
+      "examples": [
+        {
+          "id": "standard",
+          "label": "Fill Standard Case",
+          "values": {
+            "caseReference": "Packaging Composition Classification Reference STD-2026-104",
+            "entity": "Producer Organization STD-2026-104",
+            "reviewDate": "2026-09-08",
+            "metric": 125,
+            "evidenceNotes": "Complete: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        },
+        {
+          "id": "high-risk",
+          "label": "Fill High-Risk Case",
+          "values": {
+            "caseReference": "Packaging Composition Classification Reference RISK-2026-227",
+            "entity": "Producer Organization RISK-2026-227",
+            "reviewDate": "2026-08-19",
+            "metric": 975,
+            "evidenceNotes": "Critical exception: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        },
+        {
+          "id": "exception",
+          "label": "Fill Exception Case",
+          "values": {
+            "caseReference": "Packaging Composition Classification Reference EXC-2026-319",
+            "entity": "Producer Organization EXC-2026-319",
+            "reviewDate": "2026-08-10",
+            "metric": 41,
+            "evidenceNotes": "Reviewer follow-up: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        }
+      ],
+      "aiActions": [
+        {
+          "id": "assess",
+          "label": "Assess Risk & Value"
+        },
+        {
+          "id": "evidence",
+          "label": "Build Evidence Checklist"
+        },
+        {
+          "id": "plan",
+          "label": "Recommend Action Plan"
+        }
+      ]
+    },
+    {
+      "id": "volume",
+      "title": "Placed-on-Market Volume",
+      "description": "Evaluate placed-on-market volume with source evidence, accountable ownership, financial or operational impact, and documented approval.",
+      "fields": [
+        {
+          "key": "caseReference",
+          "label": "Placed-on-Market Volume Reference",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "entity",
+          "label": "Producer Organization",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "reviewDate",
+          "label": "Review Date",
+          "type": "date",
+          "required": true
+        },
+        {
+          "key": "metric",
+          "label": "Packaging Weight",
+          "type": "number",
+          "required": true
+        },
+        {
+          "key": "evidenceNotes",
+          "label": "Evidence and Reviewer Notes",
+          "type": "textarea",
+          "required": false
+        }
+      ],
+      "states": [
+        "intake",
+        "analyzing",
+        "review",
+        "approved",
+        "closed"
+      ],
+      "examples": [
+        {
+          "id": "standard",
+          "label": "Fill Standard Case",
+          "values": {
+            "caseReference": "Placed-on-Market Volume Reference STD-2026-104",
+            "entity": "Producer Organization STD-2026-104",
+            "reviewDate": "2026-09-08",
+            "metric": 125,
+            "evidenceNotes": "Complete: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        },
+        {
+          "id": "high-risk",
+          "label": "Fill High-Risk Case",
+          "values": {
+            "caseReference": "Placed-on-Market Volume Reference RISK-2026-227",
+            "entity": "Producer Organization RISK-2026-227",
+            "reviewDate": "2026-08-19",
+            "metric": 975,
+            "evidenceNotes": "Critical exception: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        },
+        {
+          "id": "exception",
+          "label": "Fill Exception Case",
+          "values": {
+            "caseReference": "Placed-on-Market Volume Reference EXC-2026-319",
+            "entity": "Producer Organization EXC-2026-319",
+            "reviewDate": "2026-08-10",
+            "metric": 41,
+            "evidenceNotes": "Reviewer follow-up: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        }
+      ],
+      "aiActions": [
+        {
+          "id": "assess",
+          "label": "Assess Risk & Value"
+        },
+        {
+          "id": "evidence",
+          "label": "Build Evidence Checklist"
+        },
+        {
+          "id": "plan",
+          "label": "Recommend Action Plan"
+        }
+      ]
+    },
+    {
+      "id": "fee",
+      "title": "Eco-Modulation Fee Calculation",
+      "description": "Evaluate eco-modulation fee calculation with source evidence, accountable ownership, financial or operational impact, and documented approval.",
+      "fields": [
+        {
+          "key": "caseReference",
+          "label": "Eco-Modulation Fee Calculation Reference",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "entity",
+          "label": "Producer Organization",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "reviewDate",
+          "label": "Review Date",
+          "type": "date",
+          "required": true
+        },
+        {
+          "key": "metric",
+          "label": "EPR Fees",
+          "type": "currency",
+          "required": true
+        },
+        {
+          "key": "evidenceNotes",
+          "label": "Evidence and Reviewer Notes",
+          "type": "textarea",
+          "required": false
+        }
+      ],
+      "states": [
+        "intake",
+        "analyzing",
+        "review",
+        "approved",
+        "closed"
+      ],
+      "examples": [
+        {
+          "id": "standard",
+          "label": "Fill Standard Case",
+          "values": {
+            "caseReference": "Eco-Modulation Fee Calculation Reference STD-2026-104",
+            "entity": "Producer Organization STD-2026-104",
+            "reviewDate": "2026-09-08",
+            "metric": 285000,
+            "evidenceNotes": "Complete: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        },
+        {
+          "id": "high-risk",
+          "label": "Fill High-Risk Case",
+          "values": {
+            "caseReference": "Eco-Modulation Fee Calculation Reference RISK-2026-227",
+            "entity": "Producer Organization RISK-2026-227",
+            "reviewDate": "2026-08-19",
+            "metric": 875000,
+            "evidenceNotes": "Critical exception: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        },
+        {
+          "id": "exception",
+          "label": "Fill Exception Case",
+          "values": {
+            "caseReference": "Eco-Modulation Fee Calculation Reference EXC-2026-319",
+            "entity": "Producer Organization EXC-2026-319",
+            "reviewDate": "2026-08-10",
+            "metric": 142500,
+            "evidenceNotes": "Reviewer follow-up: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        }
+      ],
+      "aiActions": [
+        {
+          "id": "assess",
+          "label": "Assess Risk & Value"
+        },
+        {
+          "id": "evidence",
+          "label": "Build Evidence Checklist"
+        },
+        {
+          "id": "plan",
+          "label": "Recommend Action Plan"
+        }
+      ]
+    },
+    {
+      "id": "scheme",
+      "title": "Producer Responsibility Organization",
+      "description": "Evaluate producer responsibility organization with source evidence, accountable ownership, financial or operational impact, and documented approval.",
+      "fields": [
+        {
+          "key": "caseReference",
+          "label": "Producer Responsibility Organization Reference",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "entity",
+          "label": "Producer Organization",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "reviewDate",
+          "label": "Review Date",
+          "type": "date",
+          "required": true
+        },
+        {
+          "key": "metric",
+          "label": "Schemes Managed",
+          "type": "number",
+          "required": true
+        },
+        {
+          "key": "evidenceNotes",
+          "label": "Evidence and Reviewer Notes",
+          "type": "textarea",
+          "required": false
+        }
+      ],
+      "states": [
+        "intake",
+        "analyzing",
+        "review",
+        "approved",
+        "closed"
+      ],
+      "examples": [
+        {
+          "id": "standard",
+          "label": "Fill Standard Case",
+          "values": {
+            "caseReference": "Producer Responsibility Organization Reference STD-2026-104",
+            "entity": "Producer Organization STD-2026-104",
+            "reviewDate": "2026-09-08",
+            "metric": 125,
+            "evidenceNotes": "Complete: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        },
+        {
+          "id": "high-risk",
+          "label": "Fill High-Risk Case",
+          "values": {
+            "caseReference": "Producer Responsibility Organization Reference RISK-2026-227",
+            "entity": "Producer Organization RISK-2026-227",
+            "reviewDate": "2026-08-19",
+            "metric": 975,
+            "evidenceNotes": "Critical exception: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        },
+        {
+          "id": "exception",
+          "label": "Fill Exception Case",
+          "values": {
+            "caseReference": "Producer Responsibility Organization Reference EXC-2026-319",
+            "entity": "Producer Organization EXC-2026-319",
+            "reviewDate": "2026-08-10",
+            "metric": 41,
+            "evidenceNotes": "Reviewer follow-up: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        }
+      ],
+      "aiActions": [
+        {
+          "id": "assess",
+          "label": "Assess Risk & Value"
+        },
+        {
+          "id": "evidence",
+          "label": "Build Evidence Checklist"
+        },
+        {
+          "id": "plan",
+          "label": "Recommend Action Plan"
+        }
+      ]
+    },
+    {
+      "id": "declaration",
+      "title": "Jurisdiction Declaration",
+      "description": "Evaluate jurisdiction declaration with source evidence, accountable ownership, financial or operational impact, and documented approval.",
+      "fields": [
+        {
+          "key": "caseReference",
+          "label": "Jurisdiction Declaration Reference",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "entity",
+          "label": "Producer Organization",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "reviewDate",
+          "label": "Review Date",
+          "type": "date",
+          "required": true
+        },
+        {
+          "key": "metric",
+          "label": "Declarations Due",
+          "type": "number",
+          "required": true
+        },
+        {
+          "key": "evidenceNotes",
+          "label": "Evidence and Reviewer Notes",
+          "type": "textarea",
+          "required": false
+        }
+      ],
+      "states": [
+        "intake",
+        "analyzing",
+        "review",
+        "approved",
+        "closed"
+      ],
+      "examples": [
+        {
+          "id": "standard",
+          "label": "Fill Standard Case",
+          "values": {
+            "caseReference": "Jurisdiction Declaration Reference STD-2026-104",
+            "entity": "Producer Organization STD-2026-104",
+            "reviewDate": "2026-09-08",
+            "metric": 125,
+            "evidenceNotes": "Complete: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        },
+        {
+          "id": "high-risk",
+          "label": "Fill High-Risk Case",
+          "values": {
+            "caseReference": "Jurisdiction Declaration Reference RISK-2026-227",
+            "entity": "Producer Organization RISK-2026-227",
+            "reviewDate": "2026-08-19",
+            "metric": 975,
+            "evidenceNotes": "Critical exception: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        },
+        {
+          "id": "exception",
+          "label": "Fill Exception Case",
+          "values": {
+            "caseReference": "Jurisdiction Declaration Reference EXC-2026-319",
+            "entity": "Producer Organization EXC-2026-319",
+            "reviewDate": "2026-08-10",
+            "metric": 41,
+            "evidenceNotes": "Reviewer follow-up: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        }
+      ],
+      "aiActions": [
+        {
+          "id": "assess",
+          "label": "Assess Risk & Value"
+        },
+        {
+          "id": "evidence",
+          "label": "Build Evidence Checklist"
+        },
+        {
+          "id": "plan",
+          "label": "Recommend Action Plan"
+        }
+      ]
+    },
+    {
+      "id": "evidence",
+      "title": "Recycling and Recovery Evidence",
+      "description": "Evaluate recycling and recovery evidence with source evidence, accountable ownership, financial or operational impact, and documented approval.",
+      "fields": [
+        {
+          "key": "caseReference",
+          "label": "Recycling and Recovery Evidence Reference",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "entity",
+          "label": "Producer Organization",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "reviewDate",
+          "label": "Review Date",
+          "type": "date",
+          "required": true
+        },
+        {
+          "key": "metric",
+          "label": "Recovered Weight",
+          "type": "number",
+          "required": true
+        },
+        {
+          "key": "evidenceNotes",
+          "label": "Evidence and Reviewer Notes",
+          "type": "textarea",
+          "required": false
+        }
+      ],
+      "states": [
+        "intake",
+        "analyzing",
+        "review",
+        "approved",
+        "closed"
+      ],
+      "examples": [
+        {
+          "id": "standard",
+          "label": "Fill Standard Case",
+          "values": {
+            "caseReference": "Recycling and Recovery Evidence Reference STD-2026-104",
+            "entity": "Producer Organization STD-2026-104",
+            "reviewDate": "2026-09-08",
+            "metric": 125,
+            "evidenceNotes": "Complete: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        },
+        {
+          "id": "high-risk",
+          "label": "Fill High-Risk Case",
+          "values": {
+            "caseReference": "Recycling and Recovery Evidence Reference RISK-2026-227",
+            "entity": "Producer Organization RISK-2026-227",
+            "reviewDate": "2026-08-19",
+            "metric": 975,
+            "evidenceNotes": "Critical exception: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        },
+        {
+          "id": "exception",
+          "label": "Fill Exception Case",
+          "values": {
+            "caseReference": "Recycling and Recovery Evidence Reference EXC-2026-319",
+            "entity": "Producer Organization EXC-2026-319",
+            "reviewDate": "2026-08-10",
+            "metric": 41,
+            "evidenceNotes": "Reviewer follow-up: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        }
+      ],
+      "aiActions": [
+        {
+          "id": "assess",
+          "label": "Assess Risk & Value"
+        },
+        {
+          "id": "evidence",
+          "label": "Build Evidence Checklist"
+        },
+        {
+          "id": "plan",
+          "label": "Recommend Action Plan"
+        }
+      ]
+    },
+    {
+      "id": "forecast",
+      "title": "EPR Cost Forecast",
+      "description": "Evaluate epr cost forecast with source evidence, accountable ownership, financial or operational impact, and documented approval.",
+      "fields": [
+        {
+          "key": "caseReference",
+          "label": "EPR Cost Forecast Reference",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "entity",
+          "label": "Producer Organization",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "reviewDate",
+          "label": "Review Date",
+          "type": "date",
+          "required": true
+        },
+        {
+          "key": "metric",
+          "label": "Forecast Cost",
+          "type": "currency",
+          "required": true
+        },
+        {
+          "key": "evidenceNotes",
+          "label": "Evidence and Reviewer Notes",
+          "type": "textarea",
+          "required": false
+        }
+      ],
+      "states": [
+        "intake",
+        "analyzing",
+        "review",
+        "approved",
+        "closed"
+      ],
+      "examples": [
+        {
+          "id": "standard",
+          "label": "Fill Standard Case",
+          "values": {
+            "caseReference": "EPR Cost Forecast Reference STD-2026-104",
+            "entity": "Producer Organization STD-2026-104",
+            "reviewDate": "2026-09-08",
+            "metric": 285000,
+            "evidenceNotes": "Complete: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        },
+        {
+          "id": "high-risk",
+          "label": "Fill High-Risk Case",
+          "values": {
+            "caseReference": "EPR Cost Forecast Reference RISK-2026-227",
+            "entity": "Producer Organization RISK-2026-227",
+            "reviewDate": "2026-08-19",
+            "metric": 875000,
+            "evidenceNotes": "Critical exception: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        },
+        {
+          "id": "exception",
+          "label": "Fill Exception Case",
+          "values": {
+            "caseReference": "EPR Cost Forecast Reference EXC-2026-319",
+            "entity": "Producer Organization EXC-2026-319",
+            "reviewDate": "2026-08-10",
+            "metric": 142500,
+            "evidenceNotes": "Reviewer follow-up: source evidence, financial impact, control context, and documented reviewer rationale are available for analysis."
+          }
+        }
+      ],
+      "aiActions": [
+        {
+          "id": "assess",
+          "label": "Assess Risk & Value"
+        },
+        {
+          "id": "evidence",
+          "label": "Build Evidence Checklist"
+        },
+        {
+          "id": "plan",
+          "label": "Recommend Action Plan"
+        }
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "scope",
+      "title": "Producer Obligation Assessment Register",
+      "description": "Operational records, ownership, status, financial value, and evidence for producer obligation assessment.",
+      "table": "op_scope",
+      "columns": [
+        {
+          "key": "caseReference",
+          "label": "Producer Obligation Assessment Reference",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_caseReference"
+        },
+        {
+          "key": "entity",
+          "label": "Producer Organization",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_entity"
+        },
+        {
+          "key": "reviewDate",
+          "label": "Review Date",
+          "type": "date",
+          "required": true,
+          "dbKey": "data_reviewDate"
+        },
+        {
+          "key": "metric",
+          "label": "Markets in Scope",
+          "type": "number",
+          "required": true,
+          "dbKey": "data_metric"
+        },
+        {
+          "key": "evidenceNotes",
+          "label": "Evidence and Reviewer Notes",
+          "type": "textarea",
+          "required": false,
+          "dbKey": "data_evidenceNotes"
+        }
+      ]
+    },
+    {
+      "id": "composition",
+      "title": "Packaging Composition Classification Register",
+      "description": "Operational records, ownership, status, financial value, and evidence for packaging composition classification.",
+      "table": "op_composition",
+      "columns": [
+        {
+          "key": "caseReference",
+          "label": "Packaging Composition Classification Reference",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_caseReference"
+        },
+        {
+          "key": "entity",
+          "label": "Producer Organization",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_entity"
+        },
+        {
+          "key": "reviewDate",
+          "label": "Review Date",
+          "type": "date",
+          "required": true,
+          "dbKey": "data_reviewDate"
+        },
+        {
+          "key": "metric",
+          "label": "Packaging SKUs",
+          "type": "number",
+          "required": true,
+          "dbKey": "data_metric"
+        },
+        {
+          "key": "evidenceNotes",
+          "label": "Evidence and Reviewer Notes",
+          "type": "textarea",
+          "required": false,
+          "dbKey": "data_evidenceNotes"
+        }
+      ]
+    },
+    {
+      "id": "volume",
+      "title": "Placed-on-Market Volume Register",
+      "description": "Operational records, ownership, status, financial value, and evidence for placed-on-market volume.",
+      "table": "op_volume",
+      "columns": [
+        {
+          "key": "caseReference",
+          "label": "Placed-on-Market Volume Reference",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_caseReference"
+        },
+        {
+          "key": "entity",
+          "label": "Producer Organization",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_entity"
+        },
+        {
+          "key": "reviewDate",
+          "label": "Review Date",
+          "type": "date",
+          "required": true,
+          "dbKey": "data_reviewDate"
+        },
+        {
+          "key": "metric",
+          "label": "Packaging Weight",
+          "type": "number",
+          "required": true,
+          "dbKey": "data_metric"
+        },
+        {
+          "key": "evidenceNotes",
+          "label": "Evidence and Reviewer Notes",
+          "type": "textarea",
+          "required": false,
+          "dbKey": "data_evidenceNotes"
+        }
+      ]
+    },
+    {
+      "id": "fee",
+      "title": "Eco-Modulation Fee Calculation Register",
+      "description": "Operational records, ownership, status, financial value, and evidence for eco-modulation fee calculation.",
+      "table": "op_fee",
+      "columns": [
+        {
+          "key": "caseReference",
+          "label": "Eco-Modulation Fee Calculation Reference",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_caseReference"
+        },
+        {
+          "key": "entity",
+          "label": "Producer Organization",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_entity"
+        },
+        {
+          "key": "reviewDate",
+          "label": "Review Date",
+          "type": "date",
+          "required": true,
+          "dbKey": "data_reviewDate"
+        },
+        {
+          "key": "metric",
+          "label": "EPR Fees",
+          "type": "currency",
+          "required": true,
+          "dbKey": "data_metric"
+        },
+        {
+          "key": "evidenceNotes",
+          "label": "Evidence and Reviewer Notes",
+          "type": "textarea",
+          "required": false,
+          "dbKey": "data_evidenceNotes"
+        }
+      ]
+    },
+    {
+      "id": "scheme",
+      "title": "Producer Responsibility Organization Register",
+      "description": "Operational records, ownership, status, financial value, and evidence for producer responsibility organization.",
+      "table": "op_scheme",
+      "columns": [
+        {
+          "key": "caseReference",
+          "label": "Producer Responsibility Organization Reference",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_caseReference"
+        },
+        {
+          "key": "entity",
+          "label": "Producer Organization",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_entity"
+        },
+        {
+          "key": "reviewDate",
+          "label": "Review Date",
+          "type": "date",
+          "required": true,
+          "dbKey": "data_reviewDate"
+        },
+        {
+          "key": "metric",
+          "label": "Schemes Managed",
+          "type": "number",
+          "required": true,
+          "dbKey": "data_metric"
+        },
+        {
+          "key": "evidenceNotes",
+          "label": "Evidence and Reviewer Notes",
+          "type": "textarea",
+          "required": false,
+          "dbKey": "data_evidenceNotes"
+        }
+      ]
+    },
+    {
+      "id": "declaration",
+      "title": "Jurisdiction Declaration Register",
+      "description": "Operational records, ownership, status, financial value, and evidence for jurisdiction declaration.",
+      "table": "op_declaration",
+      "columns": [
+        {
+          "key": "caseReference",
+          "label": "Jurisdiction Declaration Reference",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_caseReference"
+        },
+        {
+          "key": "entity",
+          "label": "Producer Organization",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_entity"
+        },
+        {
+          "key": "reviewDate",
+          "label": "Review Date",
+          "type": "date",
+          "required": true,
+          "dbKey": "data_reviewDate"
+        },
+        {
+          "key": "metric",
+          "label": "Declarations Due",
+          "type": "number",
+          "required": true,
+          "dbKey": "data_metric"
+        },
+        {
+          "key": "evidenceNotes",
+          "label": "Evidence and Reviewer Notes",
+          "type": "textarea",
+          "required": false,
+          "dbKey": "data_evidenceNotes"
+        }
+      ]
+    },
+    {
+      "id": "evidence",
+      "title": "Recycling and Recovery Evidence Register",
+      "description": "Operational records, ownership, status, financial value, and evidence for recycling and recovery evidence.",
+      "table": "op_evidence",
+      "columns": [
+        {
+          "key": "caseReference",
+          "label": "Recycling and Recovery Evidence Reference",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_caseReference"
+        },
+        {
+          "key": "entity",
+          "label": "Producer Organization",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_entity"
+        },
+        {
+          "key": "reviewDate",
+          "label": "Review Date",
+          "type": "date",
+          "required": true,
+          "dbKey": "data_reviewDate"
+        },
+        {
+          "key": "metric",
+          "label": "Recovered Weight",
+          "type": "number",
+          "required": true,
+          "dbKey": "data_metric"
+        },
+        {
+          "key": "evidenceNotes",
+          "label": "Evidence and Reviewer Notes",
+          "type": "textarea",
+          "required": false,
+          "dbKey": "data_evidenceNotes"
+        }
+      ]
+    },
+    {
+      "id": "forecast",
+      "title": "EPR Cost Forecast Register",
+      "description": "Operational records, ownership, status, financial value, and evidence for epr cost forecast.",
+      "table": "op_forecast",
+      "columns": [
+        {
+          "key": "caseReference",
+          "label": "EPR Cost Forecast Reference",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_caseReference"
+        },
+        {
+          "key": "entity",
+          "label": "Producer Organization",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_entity"
+        },
+        {
+          "key": "reviewDate",
+          "label": "Review Date",
+          "type": "date",
+          "required": true,
+          "dbKey": "data_reviewDate"
+        },
+        {
+          "key": "metric",
+          "label": "Forecast Cost",
+          "type": "currency",
+          "required": true,
+          "dbKey": "data_metric"
+        },
+        {
+          "key": "evidenceNotes",
+          "label": "Evidence and Reviewer Notes",
+          "type": "textarea",
+          "required": false,
+          "dbKey": "data_evidenceNotes"
+        }
+      ]
+    },
+    {
+      "id": "producer-master",
+      "title": "Producer and Brand Registry",
+      "description": "Controlled producer and brand registry records supporting operational decisions and audit evidence.",
+      "table": "op_producer_master",
+      "columns": [
+        {
+          "key": "recordId",
+          "label": "Producer and Brand Registry ID",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_recordId"
+        },
+        {
+          "key": "name",
+          "label": "Producer Organization",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_name"
+        },
+        {
+          "key": "status",
+          "label": "Status",
+          "type": "select",
+          "required": true,
+          "options": [
+            "Active",
+            "Pending",
+            "Suspended",
+            "Retired"
+          ],
+          "dbKey": "data_status"
+        },
+        {
+          "key": "effectiveDate",
+          "label": "Effective Date",
+          "type": "date",
+          "required": true,
+          "dbKey": "data_effectiveDate"
+        }
+      ]
+    },
+    {
+      "id": "packaging-master",
+      "title": "Packaging Component Master",
+      "description": "Controlled packaging component master records supporting operational decisions and audit evidence.",
+      "table": "op_packaging_master",
+      "columns": [
+        {
+          "key": "recordId",
+          "label": "Packaging Component Master ID",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_recordId"
+        },
+        {
+          "key": "name",
+          "label": "Producer Organization",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_name"
+        },
+        {
+          "key": "status",
+          "label": "Status",
+          "type": "select",
+          "required": true,
+          "options": [
+            "Active",
+            "Pending",
+            "Suspended",
+            "Retired"
+          ],
+          "dbKey": "data_status"
+        },
+        {
+          "key": "effectiveDate",
+          "label": "Effective Date",
+          "type": "date",
+          "required": true,
+          "dbKey": "data_effectiveDate"
+        }
+      ]
+    },
+    {
+      "id": "jurisdiction-master",
+      "title": "EPR Jurisdiction Rule Library",
+      "description": "Controlled epr jurisdiction rule library records supporting operational decisions and audit evidence.",
+      "table": "op_jurisdiction_master",
+      "columns": [
+        {
+          "key": "recordId",
+          "label": "EPR Jurisdiction Rule Library ID",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_recordId"
+        },
+        {
+          "key": "name",
+          "label": "Producer Organization",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_name"
+        },
+        {
+          "key": "status",
+          "label": "Status",
+          "type": "select",
+          "required": true,
+          "options": [
+            "Active",
+            "Pending",
+            "Suspended",
+            "Retired"
+          ],
+          "dbKey": "data_status"
+        },
+        {
+          "key": "effectiveDate",
+          "label": "Effective Date",
+          "type": "date",
+          "required": true,
+          "dbKey": "data_effectiveDate"
+        }
+      ]
+    },
+    {
+      "id": "scheme-master",
+      "title": "PRO and Recycling Scheme Directory",
+      "description": "Controlled pro and recycling scheme directory records supporting operational decisions and audit evidence.",
+      "table": "op_scheme_master",
+      "columns": [
+        {
+          "key": "recordId",
+          "label": "PRO and Recycling Scheme Directory ID",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_recordId"
+        },
+        {
+          "key": "name",
+          "label": "Producer Organization",
+          "type": "text",
+          "required": true,
+          "dbKey": "data_name"
+        },
+        {
+          "key": "status",
+          "label": "Status",
+          "type": "select",
+          "required": true,
+          "options": [
+            "Active",
+            "Pending",
+            "Suspended",
+            "Retired"
+          ],
+          "dbKey": "data_status"
+        },
+        {
+          "key": "effectiveDate",
+          "label": "Effective Date",
+          "type": "date",
+          "required": true,
+          "dbKey": "data_effectiveDate"
+        }
+      ]
+    }
+  ],
+  "domainProduct": {
+    "home": "PackEPR Compliance Command Center",
+    "context": "Packaging composition, producer obligations, eco-fees, declarations, and recycling evidence",
+    "features": [
+      {
+        "id": "scope-command",
+        "title": "Producer Obligation Assessment",
+        "description": "Coordinate producer obligation assessment across controlled source data, accountable review, measurable exposure, and retained evidence.",
+        "view": "evidence",
+        "modules": [
+          "scope",
+          "producer-master"
+        ],
+        "actions": [
+          {
+            "id": "approve-scope",
+            "label": "Approve Producer Obligation Assessment",
+            "nextStatus": "Approved",
+            "auditDetail": "Approved producer obligation assessment with source evidence and reviewer attribution."
+          },
+          {
+            "id": "escalate-scope",
+            "label": "Escalate Producer Obligation Assessment",
+            "nextStatus": "Investigating",
+            "auditDetail": "Escalated producer obligation assessment for exception remediation and additional evidence."
+          }
+        ]
+      },
+      {
+        "id": "composition-command",
+        "title": "Packaging Composition Classification",
+        "description": "Coordinate packaging composition classification across controlled source data, accountable review, measurable exposure, and retained evidence.",
+        "view": "reconciliation",
+        "modules": [
+          "composition",
+          "packaging-master"
+        ],
+        "actions": [
+          {
+            "id": "approve-composition",
+            "label": "Approve Packaging Composition Classification",
+            "nextStatus": "Approved",
+            "auditDetail": "Approved packaging composition classification with source evidence and reviewer attribution."
+          },
+          {
+            "id": "escalate-composition",
+            "label": "Escalate Packaging Composition Classification",
+            "nextStatus": "Investigating",
+            "auditDetail": "Escalated packaging composition classification for exception remediation and additional evidence."
+          }
+        ]
+      },
+      {
+        "id": "volume-command",
+        "title": "Placed-on-Market Volume",
+        "description": "Coordinate placed-on-market volume across controlled source data, accountable review, measurable exposure, and retained evidence.",
+        "view": "control",
+        "modules": [
+          "volume",
+          "jurisdiction-master"
+        ],
+        "actions": [
+          {
+            "id": "approve-volume",
+            "label": "Approve Placed-on-Market Volume",
+            "nextStatus": "Approved",
+            "auditDetail": "Approved placed-on-market volume with source evidence and reviewer attribution."
+          },
+          {
+            "id": "escalate-volume",
+            "label": "Escalate Placed-on-Market Volume",
+            "nextStatus": "Investigating",
+            "auditDetail": "Escalated placed-on-market volume for exception remediation and additional evidence."
+          }
+        ]
+      },
+      {
+        "id": "fee-command",
+        "title": "Eco-Modulation Fee Calculation",
+        "description": "Coordinate eco-modulation fee calculation across controlled source data, accountable review, measurable exposure, and retained evidence.",
+        "view": "deadline",
+        "modules": [
+          "fee",
+          "scheme-master"
+        ],
+        "actions": [
+          {
+            "id": "approve-fee",
+            "label": "Approve Eco-Modulation Fee Calculation",
+            "nextStatus": "Approved",
+            "auditDetail": "Approved eco-modulation fee calculation with source evidence and reviewer attribution."
+          },
+          {
+            "id": "escalate-fee",
+            "label": "Escalate Eco-Modulation Fee Calculation",
+            "nextStatus": "Investigating",
+            "auditDetail": "Escalated eco-modulation fee calculation for exception remediation and additional evidence."
+          }
+        ]
+      },
+      {
+        "id": "scheme-command",
+        "title": "Producer Responsibility Organization",
+        "description": "Coordinate producer responsibility organization across controlled source data, accountable review, measurable exposure, and retained evidence.",
+        "view": "board",
+        "modules": [
+          "scheme",
+          "declaration"
+        ],
+        "actions": [
+          {
+            "id": "approve-scheme",
+            "label": "Approve Producer Responsibility Organization",
+            "nextStatus": "Approved",
+            "auditDetail": "Approved producer responsibility organization with source evidence and reviewer attribution."
+          },
+          {
+            "id": "escalate-scheme",
+            "label": "Escalate Producer Responsibility Organization",
+            "nextStatus": "Investigating",
+            "auditDetail": "Escalated producer responsibility organization for exception remediation and additional evidence."
+          }
+        ]
+      }
+    ]
+  },
+  "integrations": [
+    {
+      "id": "integration-1",
+      "name": "Product master data",
+      "category": "Domain data source",
+      "mode": "Read-only demo connector"
+    },
+    {
+      "id": "integration-2",
+      "name": "Packaging bill of materials",
+      "category": "Domain data source",
+      "mode": "Read-only demo connector"
+    },
+    {
+      "id": "integration-3",
+      "name": "Sales shipment feed",
+      "category": "Domain data source",
+      "mode": "Read-only demo connector"
+    },
+    {
+      "id": "integration-4",
+      "name": "PRO reporting portal",
+      "category": "Domain data source",
+      "mode": "Read-only demo connector"
+    },
+    {
+      "id": "integration-5",
+      "name": "Recycler evidence feed",
+      "category": "Domain data source",
+      "mode": "Read-only demo connector"
+    }
+  ],
+  "featureCount": 40,
+  "seededRecords": 300,
+  "demoUsers": 3,
+  "apiPort": 5550,
+  "dbName": "profit_ai_packaging_epr_compliance"
+}
